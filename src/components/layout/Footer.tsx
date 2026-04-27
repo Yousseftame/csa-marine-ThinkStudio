@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-navy text-white pt-20 pb-8">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mb-12 md:mb-16">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <a
@@ -63,28 +63,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-heading font-semibold mb-6 border-b border-white/10 pb-3">
-              Core Services
-            </h3>
-            <ul className="space-y-3">
-              {[
-                "Vessel Coordination",
-                "Port Authority Communication",
-                "Crew Services",
-                "Shipping Documentation",
-                "Ship Chandling",
-              ].map((service) => (
-                <li key={service}>
-                  <span className="text-off-white/80 hover:text-white transition-colors text-sm flex items-center gap-2 cursor-default">
-                    <span className="w-1.5 h-1.5 bg-ocean rounded-full"></span>
-                    {service}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+
 
           {/* Contact Info */}
           <div>
