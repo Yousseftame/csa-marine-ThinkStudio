@@ -8,33 +8,34 @@ export default function AboutSection() {
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
           {/* Image Side with Parallax/Overlap Effects */}
-          <div className="lg:w-1/2 relative w-full">
+          {/* pb-12 gives room for the overlapping badge on mobile */}
+          <div className="lg:w-1/2 relative w-full pb-12 lg:pb-0">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-              className="relative aspect-[4/5] md:aspect-[3/4] rounded-sm overflow-hidden shadow-2xl z-10"
+              className="relative w-full aspect-[3/2] sm:aspect-[4/3] lg:aspect-[3/4] rounded-sm overflow-hidden shadow-2xl z-10"
             >
               <img 
-                src="/about-us.png" 
-                alt="CSA Marine Port Operations" 
-                className="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1696287146802-af8ccce45601?auto=format&fit=crop&w=1200&q=90" 
+                alt="CSA Marine - Container Ship at Sea" 
+                className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-navy/10 mix-blend-multiply" />
             </motion.div>
 
-            {/* Overlapping Badge */}
+            {/* Overlapping Badge — repositioned to stay in-bounds on mobile */}
             <motion.div 
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="absolute -bottom-8 -right-8 md:-right-12 bg-white p-8 shadow-xl border-l-4 border-ocean z-20 flex flex-col items-center justify-center max-w-[200px]"
+              className="absolute bottom-0 right-0 md:-bottom-4 md:-right-8 bg-white p-6 shadow-xl border-l-4 border-ocean z-20 flex flex-col items-center justify-center max-w-[160px]"
             >
-              <Anchor className="text-ocean mb-4" size={40} strokeWidth={1.5} />
-              <span className="text-4xl font-heading font-black text-navy leading-none mb-2">2016</span>
-              <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest text-center">
+              <Anchor className="text-ocean mb-3" size={32} strokeWidth={1.5} />
+              <span className="text-3xl font-heading font-black text-navy leading-none mb-1">2016</span>
+              <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest text-center">
                 Established Excellence
               </span>
             </motion.div>
@@ -77,28 +78,28 @@ export default function AboutSection() {
             </motion.div>
             
             <motion.div 
-              className="mt-12 grid grid-cols-2 gap-8 pt-10 border-t border-gray-200"
+              className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 pt-10 border-t border-gray-200"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              <div className="flex items-start gap-4">
-                <div className="bg-white p-3 rounded-sm shadow-sm text-ocean shrink-0">
+              <div className="flex items-start gap-4 p-4 md:p-0 bg-white md:bg-transparent rounded-sm shadow-sm md:shadow-none border border-gray-100 md:border-none">
+                <div className="bg-off-white md:bg-white p-3 rounded-sm shadow-sm text-ocean shrink-0">
                   <Globe2 size={24} />
                 </div>
                 <div>
-                  <p className="text-3xl font-heading font-black text-navy mb-1">100%</p>
-                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Port Coverage</p>
+                  <p className="text-2xl lg:text-3xl font-heading font-black text-navy mb-1 leading-none">100%</p>
+                  <p className="text-[11px] md:text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Port Coverage</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="bg-white p-3 rounded-sm shadow-sm text-ocean shrink-0">
+              <div className="flex items-start gap-4 p-4 md:p-0 bg-white md:bg-transparent rounded-sm shadow-sm md:shadow-none border border-gray-100 md:border-none">
+                <div className="bg-off-white md:bg-white p-3 rounded-sm shadow-sm text-ocean shrink-0">
                   <Anchor size={24} />
                 </div>
                 <div>
-                  <p className="text-3xl font-heading font-black text-navy mb-1">End-to-End</p>
-                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Service Guarantee</p>
+                  <p className="text-2xl lg:text-3xl font-heading font-black text-navy mb-1 leading-none">End-to-End</p>
+                  <p className="text-[11px] md:text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Service Guarantee</p>
                 </div>
               </div>
             </motion.div>

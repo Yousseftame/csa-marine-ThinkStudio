@@ -14,43 +14,66 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Accreditation', href: '#accreditation' },
-    { name: 'Clients', href: '#clients' },
+    { name: "About Us", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "licenses", href: "#accreditation" },
+    { name: "Clients", href: "#clients" },
   ];
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-white/95 backdrop-blur-sm py-5'
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out border-b ${
+        isScrolled 
+          ? 'bg-white shadow-lg py-0 border-transparent' 
+          : 'bg-transparent py-0 border-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+      <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center h-14 md:h-16">
         {/* Logo */}
-        <a href="#" className="flex items-center group">
+        <a href="#" className="flex items-center group h-full py-2">
           <img 
             src="/logo.png" 
             alt="C.S.A Marine Logo" 
-            className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className={`h-full w-auto object-contain transition-all duration-500 ${
+              isScrolled ? 'opacity-100' : 'brightness-0 invert opacity-90'
+            }`}
           />
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8 h-full">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-navy font-medium text-sm uppercase tracking-wider hover:text-ocean transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-ocean after:transition-all after:duration-300 hover:after:w-full"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.href);
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className={`font-semibold text-xs lg:text-sm uppercase tracking-widest transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full ${
+                isScrolled ? 'text-navy hover:text-ocean' : 'text-white/90 hover:text-white'
+              }`}
             >
               {link.name}
             </a>
           ))}
           <a
             href="#contact"
-            className="bg-navy hover:bg-ocean text-white px-6 py-2.5 rounded-sm font-semibold transition-all duration-300 uppercase text-sm tracking-wide shadow-lg shadow-navy/20"
+            onClick={(e) => {
+              e.preventDefault();
+              const target = document.querySelector('#contact');
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className={`px-6 py-2 rounded-sm font-bold uppercase text-xs tracking-widest transition-all duration-300 ${
+              isScrolled 
+                ? 'bg-navy text-white hover:bg-ocean shadow-md' 
+                : 'bg-white/10 text-white hover:bg-white hover:text-navy backdrop-blur-sm border border-white/20'
+            }`}
           >
             Contact Us
           </a>
@@ -58,7 +81,9 @@ export default function Navbar() {
 
         {/* Mobile Nav Toggle */}
         <button
-          className="md:hidden text-navy hover:text-ocean transition-colors"
+          className={`md:hidden transition-colors ${
+            isScrolled ? 'text-navy hover:text-ocean' : 'text-white'
+          }`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
