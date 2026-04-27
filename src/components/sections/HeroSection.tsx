@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import heroVideo from '../../assets/23215-334239340.mp4';
+
 
 export default function HeroSection() {
   const handleNav = (href: string) => {
@@ -19,7 +19,7 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
           poster="/hero-bg.png"
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2019/05/01/23215-334239340.mp4" type="video/mp4" />
         </video>
         {/* Subtle dark overlay */}
         <div className="absolute inset-0 bg-black/35" />
