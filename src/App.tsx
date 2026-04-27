@@ -1,17 +1,29 @@
-const App = () => {
-	return (
-		<div className="min-h-screen flex flex-col bg-black text-white/95 items-center justify-center text-2xl font-bold text-center">
-			<img
-				className="size-40"
-				src="https://res.cloudinary.com/dltj8bim0/image/upload/v1761060580/logo_kukwt0.png"
-				alt=""
-			/>
-			<p>Hello Vite + React + TailwindCSS!</p>
-			
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import SplashScreen from './components/layout/SplashScreen';
+import HeroSection from './components/sections/HeroSection';
+import AboutSection from './components/sections/AboutSection';
+import ServicesSection from './components/sections/ServicesSection';
+import AccreditationSection from './components/sections/AccreditationSection';
+import ClientsSection from './components/sections/ClientsSection';
+import WhyChooseUsSection from './components/sections/WhyChooseUsSection';
 
-			
-		</div>
-	);
+const App = () => {
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <SplashScreen />
+      <Navbar />
+      <main className="flex-grow">
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <WhyChooseUsSection />
+        <AccreditationSection />
+        <ClientsSection />
+      </main>
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
