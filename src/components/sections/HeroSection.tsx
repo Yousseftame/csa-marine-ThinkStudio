@@ -22,7 +22,7 @@ export default function HeroSection() {
           poster="/hero-bg.png"
         >
           <source
-            src="https://pecnimkzchwlmsbbdfnt.supabase.co/storage/v1/object/sign/websitebucket/23215-334239340.webm?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZjU1MmNjYS0xMGYzLTQ1MTMtOWQ0Mi00OGYwMGQ3MDM2NGMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJ3ZWJzaXRlYnVja2V0LzIzMjE1LTMzNDIzOTM0MC53ZWJtIiwiaWF0IjoxNzc3NTU4MDE5LCJleHAiOjIwOTI5MTgwMTl9.YBdHNQ7Lu4VdW6sZf9kkKvXAyYfv1n0liL1qJxbZxuU"
+            src="https://pecnimkzchwlmsbbdfnt.supabase.co/storage/v1/object/sign/websitebucket/csamarine70.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZjU1MmNjYS0xMGYzLTQ1MTMtOWQ0Mi00OGYwMGQ3MDM2NGMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJ3ZWJzaXRlYnVja2V0L2NzYW1hcmluZTcwLm1wNCIsImlhdCI6MTc3NzU1ODUxMSwiZXhwIjoyMDkyOTE4NTExfQ.zHHsLTCczgj8ockhGNRzPMTlUnwC-hau8CXR6so6Y1g"
             type="video/mp4"
           />
         </video>
