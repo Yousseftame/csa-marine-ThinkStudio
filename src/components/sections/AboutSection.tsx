@@ -126,7 +126,7 @@ export default function AboutSection() {
                   <Anchor size={24} />
                 </div>
                 <div>
-                  <p className="text-2xl lg:text-3xl font-heading font-black text-navy mb-1 leading-none">End-to-End</p>
+                  <p className="text-2xl lg:text-3xl font-heading font-black text-navy mb-1 leading-none">{t('about.stat_end_to_end')}</p>
                   <p className="text-[11px] md:text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">{t('about.stat_guarantee')}</p>
                 </div>
               </div>

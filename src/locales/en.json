@@ -22,7 +22,8 @@
     "rebates_title": "Suez Canal Transit & Rebates",
     "rebates_desc": "With our direct connection to the Suez Canal Authority, we can propose highly competitive rebates to owners who choose to pass by for specific routes and trades.",
     "stat_ports": "Port Coverage",
-    "stat_guarantee": "Service Guarantee"
+    "stat_guarantee": "Service Guarantee",
+    "stat_end_to_end": "End-to-End"
   },
   "contact": {
     "eyebrow": "Request a Quote",
@@ -50,7 +51,8 @@
     "holidays_title": "2026 Port Holidays",
     "port_list_title": "Port List",
     "read_more": "View Document",
-    "status_operational": "Operational"
+    "status_operational": "Operational",
+    "desc_note": "* Note: Vessel transits and port operations generally continue 24/7. Holidays primarily affect administrative and customs offices."
   },
   "suez_page": {
     "eyebrow": "Maritime Excellence",
@@ -133,5 +135,32 @@
     "h5_name": "Eid Al-Adha",
     "h5_date": "May 27 - 30, 2026",
     "h5_status": "Limited Admin Services"
+  },
+  "accreditation": {
+    "eyebrow": "Trust & Authority",
+    "title1": "Licenses &",
+    "title2": "Accreditation",
+    "desc": "The company possesses all necessary licenses and approvals to function as a ship agency in Egypt, including:",
+    "hero_title": "100% Compliant & Certified",
+    "hero_desc": "We strictly adhere to all international maritime standards and local regulations, ensuring risk-free operations for our global clients.",
+    "a1_title": "Alexandria Chamber of Shipping",
+    "a1_desc": "Proud official member of the Alexandria Chamber of Shipping.",
+    "a2_title": "National Ship Agency License",
+    "a2_desc": "Granted by the Egyptian Maritime Transport Authority, covering all Egyptian maritime ports.",
+    "a3_title": "Open Tonnage Authorization",
+    "a3_desc": "Fully authorized for shipping agency operations without tonnage restrictions.",
+    "a4_title": "Port Said Authorization",
+    "a4_desc": "Specific clearance to perform comprehensive ship agency activities at Port Said Port.",
+    "a5_title": "MTS Electronic Platform",
+    "a5_desc": "Officially registered on the Egyptian Maritime Transport Sector digital platform."
+  },
+  "ports_list": {
+    "p1": "Port Said (East/West)",
+    "p2": "Suez",
+    "p3": "Alexandria",
+    "p4": "Dekheila",
+    "p5": "Damietta",
+    "p6": "Sokhna",
+    "p7": "Safaga"
   }
 }

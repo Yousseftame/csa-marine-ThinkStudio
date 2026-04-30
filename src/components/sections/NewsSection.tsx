@@ -55,13 +55,13 @@ export default function NewsSection() {
   ];
 
   const ports = [
-    "Port Said (East/West)",
-    "Suez",
-    "Alexandria",
-    "Dekheila",
-    "Damietta",
-    "Sokhna",
-    "Safaga"
+    t('ports_list.p1'),
+    t('ports_list.p2'),
+    t('ports_list.p3'),
+    t('ports_list.p4'),
+    t('ports_list.p5'),
+    t('ports_list.p6'),
+    t('ports_list.p7')
   ];
 
   return (
@@ -83,7 +83,7 @@ export default function NewsSection() {
                 <span className="text-navy font-bold uppercase tracking-widest text-sm">{t('news.eyebrow')}</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-heading font-black text-navy uppercase leading-tight mb-6">
-                {i18n.language === 'ar' ? 'الذكاء' : 'Maritime'} <span className="text-ocean">{i18n.language === 'ar' ? 'البحري' : 'Intelligence'}</span>
+                {i18n.language.startsWith('ar') ? 'الذكاء' : 'Maritime'} <span className="text-ocean">{i18n.language.startsWith('ar') ? 'البحري' : 'Intelligence'}</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl">
                 {t('news.desc')}
@@ -106,7 +106,7 @@ export default function NewsSection() {
                   <div className="flex-grow">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-[10px] font-bold uppercase tracking-widest text-ocean bg-ocean/5 px-2 py-1 rounded-sm">
-                        {i18n.language === 'ar' ? 'منشور' : 'Circular'}
+                        {i18n.language.startsWith('ar') ? 'منشور' : 'Circular'}
                       </span>
                       <span className="text-xs text-muted-foreground">{item.date}</span>
                     </div>
@@ -138,9 +138,12 @@ export default function NewsSection() {
               <div className="bg-navy p-8 rounded-sm text-white relative overflow-hidden mb-8 shadow-xl">
                 <Anchor className="absolute -right-8 -bottom-8 text-white/5" size={200} />
                 <div className="relative z-10">
+                  <div className="text-[16px] font-bold uppercase tracking-[0.2em] text-white mb-2 opacity-80">
+                    {t('news.port_list_title')}
+                  </div>
                   <h3 className="text-xl font-heading font-bold uppercase tracking-wide mb-6 flex items-center gap-3">
                     <Anchor size={20} className="text-ocean" />
-                    {t('news.port_list_title')}
+                    {i18n.language.startsWith('ar') ? 'قائمة الموانئ' : 'PORT LIST'}
                   </h3>
                   <div className="space-y-4">
                     {ports.map((port, index) => (

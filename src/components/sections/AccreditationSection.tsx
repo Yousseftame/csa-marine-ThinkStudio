@@ -1,35 +1,38 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, Building2, Anchor, Weight, MapPin, Laptop, BadgeCheck, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function AccreditationSection() {
+  const { t } = useTranslation();
+
   const accreditations = [
     {
-      title: "Alexandria Chamber of Shipping",
-      desc: "Proud official member of the Alexandria Chamber of Shipping.",
+      title: t('accreditation.a1_title'),
+      desc: t('accreditation.a1_desc'),
       icon: Building2,
       span: "md:col-span-1",
     },
     {
-      title: "National Ship Agency License",
-      desc: "Granted by the Egyptian Maritime Transport Authority, covering all Egyptian maritime ports.",
+      title: t('accreditation.a2_title'),
+      desc: t('accreditation.a2_desc'),
       icon: Anchor,
       span: "md:col-span-1",
     },
     {
-      title: "Open Tonnage Authorization",
-      desc: "Fully authorized for shipping agency operations without tonnage restrictions.",
+      title: t('accreditation.a3_title'),
+      desc: t('accreditation.a3_desc'),
       icon: Weight,
       span: "md:col-span-2 lg:col-span-1",
     },
     {
-      title: "Port Said Authorization",
-      desc: "Specific clearance to perform comprehensive ship agency activities at Port Said Port.",
+      title: t('accreditation.a4_title'),
+      desc: t('accreditation.a4_desc'),
       icon: MapPin,
       span: "md:col-span-1",
     },
     {
-      title: "MTS Electronic Platform",
-      desc: "Officially registered on the Egyptian Maritime Transport Sector digital platform.",
+      title: t('accreditation.a5_title'),
+      desc: t('accreditation.a5_desc'),
       icon: Laptop,
       span: "md:col-span-1",
     }
@@ -47,7 +50,7 @@ export default function AccreditationSection() {
       {/* Huge Watermark */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none w-full overflow-hidden flex justify-center">
         <span className="text-[12rem] md:text-[20rem] font-heading font-black text-white/[0.02] whitespace-nowrap leading-none">
-          CERTIFIED
+          {t('accreditation.title2').toUpperCase()}
         </span>
       </div>
 
@@ -65,12 +68,12 @@ export default function AccreditationSection() {
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-[2px] bg-ocean" />
               <span className="text-ocean font-bold uppercase tracking-widest text-sm flex items-center gap-2">
-                <ShieldCheck size={16} /> Trust & Authority
+                <ShieldCheck size={16} /> {t('accreditation.eyebrow')}
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white uppercase leading-[1.1]">
-              Licenses & <br className="hidden md:block" />
-              <span className="text-white/50">Accreditation</span>
+              {t('accreditation.title1')} <br className="hidden md:block" />
+              <span className="text-white/50">{t('accreditation.title2')}</span>
             </h2>
           </motion.div>
 
@@ -82,7 +85,7 @@ export default function AccreditationSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             <p className="text-white/70 text-lg leading-relaxed border-l-2 border-white/20 pl-6">
-              The company possesses all necessary licenses and approvals to function as a ship agency in Egypt, including:
+              {t('accreditation.desc')}
             </p>
           </motion.div>
         </div>
@@ -106,10 +109,10 @@ export default function AccreditationSection() {
                 <Award size={28} />
               </div>
               <h3 className="text-2xl font-heading font-bold text-white mb-3 leading-tight relative z-10">
-                100% Compliant & Certified
+                {t('accreditation.hero_title')}
               </h3>
               <p className="text-white/70 font-medium relative z-10">
-                We strictly adhere to all international maritime standards and local regulations, ensuring risk-free operations for our global clients.
+                {t('accreditation.hero_desc')}
               </p>
             </div>
           </motion.div>
@@ -127,10 +130,10 @@ export default function AccreditationSection() {
                 transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
               >
                 <Icon size={32} strokeWidth={1.5} className="text-ocean mb-6 group-hover:text-white transition-colors duration-300" />
-                <h3 className="text-xl font-heading font-bold text-white mb-3">
+                <h3 className="text-xl font-heading font-bold text-white mb-3 text-start">
                   {item.title}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed mt-auto">
+                <p className="text-white/60 text-sm leading-relaxed mt-auto text-start">
                   {item.desc}
                 </p>
               </motion.div>

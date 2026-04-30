@@ -51,9 +51,15 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   };
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'ar' : 'en';
-    i18n.changeLanguage(newLang);
+  const toggleLanguage = async () => {
+    const currentLang = i18n.language || 'en';
+    const newLang = currentLang.startsWith('en') ? 'ar' : 'en';
+    await i18n.changeLanguage(newLang);
+    
+    // Explicitly update document direction and font in Navbar too if needed, 
+    // though App.tsx already does this in a useEffect.
+    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = newLang;
   };
 
   return (
@@ -98,7 +104,7 @@ export default function Navbar() {
             }`}
           >
             <Globe size={14} />
-            {i18n.language === 'en' ? 'AR' : 'EN'}
+            {i18n.language?.startsWith('ar') ? 'EN' : 'AR'}
           </button>
 
           <a
@@ -122,7 +128,7 @@ export default function Navbar() {
               isScrolled || location.pathname !== '/' ? 'text-navy' : 'text-white'
             }`}
           >
-            {i18n.language === 'en' ? 'AR' : 'EN'}
+            {i18n.language?.startsWith('ar') ? 'EN' : 'AR'}
           </button>
           <button
             className={`transition-colors ${
