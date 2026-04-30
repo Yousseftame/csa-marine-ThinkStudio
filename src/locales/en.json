@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "about": "About Us",
+    "services": "Services",
+    "licenses": "Licenses",
+    "news": "News",
+    "suez_transit": "Suez Transit",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "eyebrow": "Established 2016",
+    "title": "Reborn for the Modern Era",
+    "subtitle": "Minimizing turnaround time and reducing operational costs across all Egyptian maritime ports.",
+    "cta_services": "Our Services",
+    "cta_contact": "Contact Agency"
+  },
+  "about": {
+    "eyebrow": "About C.S.A Marine",
+    "title": "A Leading Force in Egyptian Shipping",
+    "p1": "CSA Marine is an Egyptian ship agency company established on 23 August 2016, specializing in full ship agency operations across all Egyptian maritime ports.",
+    "p2": "With our deep understanding of local maritime regulations and strong relationships with port authorities, we guarantee seamless operations from arrival to departure. Our commitment is to provide fast, reliable, and cost-effective services to our global clients.",
+    "rebates_title": "Suez Canal Transit & Rebates",
+    "rebates_desc": "With our direct connection to the Suez Canal Authority, we can propose highly competitive rebates to owners who choose to pass by for specific routes and trades.",
+    "stat_ports": "Port Coverage",
+    "stat_guarantee": "Service Guarantee"
+  },
+  "contact": {
+    "eyebrow": "Request a Quote",
+    "title": "Ready to Assist You",
+    "desc": "Optimize your maritime operations with our expert agency services. Provide your vessel details below, and our specialized team will deliver a tailored proposal within hours.",
+    "support_title": "24/7 Operations",
+    "support_desc": "Our team is always on standby across all Egyptian ports to ensure zero delays.",
+    "response_title": "Fast Response",
+    "response_desc": "Expect a detailed PDA (Proforma Disbursement Account) shortly after submission.",
+    "form": {
+      "vessel": "Vessel Name / IMO",
+      "tonnage": "GRT / NRT / SCNT",
+      "cargo": "Type of Cargo",
+      "eta": "ETA (Estimated Arrival)",
+      "service": "Service Required",
+      "additional": "Additional Requirements",
+      "submit": "Send Inquiry"
+    }
+  },
+  "news": {
+    "eyebrow": "Updates & Circulars",
+    "title": "Maritime Intelligence",
+    "desc": "Stay updated with the latest Suez Canal circulars, toll changes, and Egyptian port holiday schedules to optimize your voyage planning.",
+    "circulars_title": "Official Circulars",
+    "holidays_title": "2026 Port Holidays",
+    "port_list_title": "Port List",
+    "read_more": "View Document",
+    "status_operational": "Operational"
+  },
+  "suez_page": {
+    "eyebrow": "Maritime Excellence",
+    "title": "Suez Canal Transit",
+    "subtitle": "Navigating the world's most critical waterway with precision, expertise, and unparalleled local support.",
+    "feat1_title": "Transit Coordination",
+    "feat1_desc": "Full management of the daily convoy system and arrival notifications.",
+    "feat2_title": "Route Optimization",
+    "feat2_desc": "Strategic guidance to minimize waiting time and optimize vessel speed.",
+    "feat3_title": "Port Authority Liaison",
+    "feat3_desc": "Direct coordination with the Suez Canal Authority for seamless clearance.",
+    "learn_more": "Learn More"
+  },
+  "services": {
+    "eyebrow": "Our Operations",
+    "title": "FULL SERVICE AGENCY",
+    "desc": "We provide comprehensive ship agency services, ensuring every aspect of your vessel's port call is managed with precision and expertise.",
+    "s1_title": "Vessel Coordination",
+    "s1_desc": "Full coordination of vessel arrival and departure operations at ports.",
+    "s2_title": "Port Communication",
+    "s2_desc": "Direct communication with port authorities and relevant regulatory bodies.",
+    "s3_title": "Crew Services",
+    "s3_desc": "Arrangement of crew services including crew change transfer and accommodation.",
+    "s4_title": "Documentation",
+    "s4_desc": "Preparation and processing of all required shipping documentation.",
+    "s5_title": "Provisions & Supply",
+    "s5_desc": "Organization of vessel provisions and supply services (ship chandling).",
+    "s6_title": "Full Representation",
+    "s6_desc": "Full agency representation for vessels across Egyptian ports and territorial waters."
+  },
+  "why_us": {
+    "title": "WHY CHOOSE US",
+    "desc": "We are dedicated to providing the highest standard of maritime agency services, ensuring your vessels are handled with priority and care.",
+    "r1_title": "Fully Licensed",
+    "r1_desc": "With all official approvals and open tonnage coverage.",
+    "r2_title": "End-to-End Service",
+    "r2_desc": "From documentation to crew services to cargo supervision.",
+    "r3_title": "Nationwide Coverage",
+    "r3_desc": "Across all Egyptian maritime ports from Alexandria to Port Said to Suez.",
+    "r4_title": "Fast Response",
+    "r4_desc": "Focused on minimizing vessel turnaround time and reducing operational costs."
+  },
+  "footer": {
+    "about": "Established in 2016, C.S.A Marine is a leading Egyptian ship agency providing full vessel operations across all Egyptian maritime ports.",
+    "links_title": "Quick Links",
+    "contact_title": "Contact Us",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "clients": {
+    "eyebrow": "Trusted Partners",
+    "title": "Our Esteemed Clients",
+    "c1": "General Authority for Supply Commodities",
+    "c2": "Egyptian Company for Fertilizers Marketing",
+    "c3": "GTCS Russian Company",
+    "c4": "INVICTUS Investment company PLC"
+  },
+  "news_items": {
+    "c1_title": "Suez Canal Toll Adjustments 2026",
+    "c1_desc": "New transit toll structures for tankers and dry bulk vessels are now in effect for the 2026 fiscal year. These adjustments are designed to align with global market trends.",
+    "c2_title": "Suez Canal Transit Rebates Update",
+    "c2_desc": "Updated rebate percentages for specific long-haul routes. Contact our agency for a detailed calculation of your potential savings.",
+    "c3_title": "Navigation Rules - Great Bitter Lakes",
+    "c3_desc": "New protocols for vessel spacing and convoy sequence have been implemented to enhance safety and transit efficiency."
+  },
+  "holidays_list": {
+    "h1_name": "Eid Al-Fitr",
+    "h1_date": "March 20 - 22, 2026",
+    "h1_status": "Limited Admin Services",
+    "h2_name": "Sham El-Nessim",
+    "h2_date": "April 13, 2026",
+    "h2_status": "Normal Operations",
+    "h3_name": "Sinai Liberation Day",
+    "h3_date": "April 25, 2026",
+    "h3_status": "Normal Operations",
+    "h4_name": "Labor Day",
+    "h4_date": "May 01, 2026",
+    "h4_status": "Limited Admin Services",
+    "h5_name": "Eid Al-Adha",
+    "h5_date": "May 27 - 30, 2026",
+    "h5_status": "Limited Admin Services"
+  }
+}

@@ -41,7 +41,7 @@ export default function SplashScreen() {
         transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
       >
         <p className="text-navy/20 font-heading text-xs tracking-[0.3em] uppercase">
-          Ensuring Efficient Operations
+          Reborn for the Modern Era
         </p>
       </motion.div>
 

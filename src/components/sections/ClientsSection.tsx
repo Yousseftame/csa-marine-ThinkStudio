@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 // Import logos from assets
 import logoGASC from '../../assets/GAC.png';
@@ -7,21 +8,23 @@ import logoGTCS from '../../assets/GTC.png';
 import logoINVICTUS from '../../assets/INIC.png';
 
 export default function ClientsSection() {
+  const { t } = useTranslation();
+
   const clients = [
     { 
-      name: "General Authority for Supply Commodities", 
+      name: t('clients.c1'), 
       logo: logoGASC 
     },
     { 
-      name: "Egyptian Company for Fertilizers Marketing", 
+      name: t('clients.c2'), 
       logo: logoECFM 
     },
     { 
-      name: "GTCS Russian Company", 
+      name: t('clients.c3'), 
       logo: logoGTCS 
     },
     { 
-      name: "INVICTUS Investment company PLC", 
+      name: t('clients.c4'), 
       logo: logoINVICTUS 
     }
   ];
@@ -40,11 +43,11 @@ export default function ClientsSection() {
           >
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-ocean mb-4 flex items-center justify-center gap-3">
               <span className="w-8 h-[2px] bg-ocean"></span>
-              Trusted Partners
+              {t('clients.eyebrow')}
               <span className="w-8 h-[2px] bg-ocean"></span>
             </p>
             <h2 className="text-4xl md:text-5xl font-heading font-black text-navy uppercase leading-tight">
-              Our Esteemed Clients
+              {t('clients.title')}
             </h2>
           </motion.div>
         </div>

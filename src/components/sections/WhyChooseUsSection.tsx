@@ -1,26 +1,29 @@
 import { Shield, Clock, Map, Route } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function WhyChooseUsSection() {
+  const { t } = useTranslation();
+
   const reasons = [
     {
       icon: <Shield size={40} />,
-      title: "Fully Licensed",
-      description: "With all official approvals and open tonnage coverage."
+      title: t('why_us.r1_title'),
+      description: t('why_us.r1_desc')
     },
     {
       icon: <Route size={40} />,
-      title: "End-to-End Service",
-      description: "From documentation to crew services to cargo supervision."
+      title: t('why_us.r2_title'),
+      description: t('why_us.r2_desc')
     },
     {
       icon: <Map size={40} />,
-      title: "Nationwide Coverage",
-      description: "Across all Egyptian maritime ports from Alexandria to Port Said to Suez."
+      title: t('why_us.r3_title'),
+      description: t('why_us.r3_desc')
     },
     {
       icon: <Clock size={40} />,
-      title: "Fast Response",
-      description: "Focused on minimizing vessel turnaround time and reducing operational costs."
+      title: t('why_us.r4_title'),
+      description: t('why_us.r4_desc')
     }
   ];
 
@@ -28,12 +31,12 @@ export default function WhyChooseUsSection() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-navy leading-tight mb-6">
-            WHY CHOOSE US
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-navy leading-tight mb-6 uppercase">
+            {t('why_us.title')}
           </h2>
           <div className="w-24 h-1 bg-ocean mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground">
-            We are dedicated to providing the highest standard of maritime agency services, ensuring your vessels are handled with priority and care.
+            {t('why_us.desc')}
           </p>
         </div>
 

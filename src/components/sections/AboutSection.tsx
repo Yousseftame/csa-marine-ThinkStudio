@@ -1,14 +1,17 @@
 import { motion } from 'framer-motion';
-import { Anchor, Globe2 } from 'lucide-react';
+import { Anchor, Globe2, BadgePercent } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function AboutSection() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-24 md:py-32 bg-off-white overflow-hidden relative">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
           {/* Image Side with Parallax/Overlap Effects */}
-          {/* pb-12 gives room for the overlapping badge on mobile */}
           <div className="lg:w-1/2 relative w-full pb-12 lg:pb-0">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
@@ -25,7 +28,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-navy/10 mix-blend-multiply" />
             </motion.div>
 
-            {/* Overlapping Badge — repositioned to stay in-bounds on mobile */}
+            {/* Overlapping Badge */}
             <motion.div 
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +39,7 @@ export default function AboutSection() {
               <Anchor className="text-ocean mb-3" size={32} strokeWidth={1.5} />
               <span className="text-3xl font-heading font-black text-navy leading-none mb-1">2016</span>
               <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest text-center">
-                Established Excellence
+                {t('about.stat_guarantee')}
               </span>
             </motion.div>
 
@@ -54,11 +57,11 @@ export default function AboutSection() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-[2px] bg-ocean" />
-                <span className="text-navy font-bold uppercase tracking-widest text-sm">About C.S.A Marine</span>
+                <span className="text-navy font-bold uppercase tracking-widest text-sm">{t('about.eyebrow')}</span>
               </div>
               
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-navy leading-[1.1] mb-8 uppercase">
-                A Leading Force in <span className="text-ocean">Egyptian Shipping</span>
+                {t('about.title')}
               </h2>
             </motion.div>
 
@@ -70,12 +73,37 @@ export default function AboutSection() {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
               <p>
-                <strong className="text-navy font-semibold">CSA Marine</strong> is an Egyptian ship agency company established on 23 August 2016, specializing in full ship agency operations across all Egyptian maritime ports.
+                <strong className="text-navy font-semibold">CSA Marine</strong> {t('about.p1')}
               </p>
               <p>
-                With our deep understanding of local maritime regulations and strong relationships with port authorities, we guarantee seamless operations from arrival to departure. Our commitment is to provide fast, reliable, and cost-effective services to our global clients.
+                {t('about.p2')}
               </p>
             </motion.div>
+            
+            {/* Suez Canal Rebates Feature Box */}
+            <Link to="/suez-canal-transit" className="block mt-8 group/link">
+              <motion.div 
+                className="bg-white p-6 border-l-4 border-ocean rounded-r-sm shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              >
+                <div className="flex items-start gap-5">
+                  <div className="bg-ocean/10 p-3 rounded-sm text-ocean shrink-0 group-hover/link:bg-ocean group-hover/link:text-white transition-colors duration-300">
+                    <BadgePercent size={28} strokeWidth={2} />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-navy mb-1.5 uppercase tracking-wide group-hover/link:text-ocean transition-colors">
+                      {t('about.rebates_title')}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {t('about.rebates_desc')}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
             
             <motion.div 
               className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 pt-10 border-t border-gray-200"
@@ -90,7 +118,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <p className="text-2xl lg:text-3xl font-heading font-black text-navy mb-1 leading-none">100%</p>
-                  <p className="text-[11px] md:text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Port Coverage</p>
+                  <p className="text-[11px] md:text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">{t('about.stat_ports')}</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-4 md:p-0 bg-white md:bg-transparent rounded-sm shadow-sm md:shadow-none border border-gray-100 md:border-none">
@@ -99,7 +127,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <p className="text-2xl lg:text-3xl font-heading font-black text-navy mb-1 leading-none">End-to-End</p>
-                  <p className="text-[11px] md:text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Service Guarantee</p>
+                  <p className="text-[11px] md:text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">{t('about.stat_guarantee')}</p>
                 </div>
               </div>
             </motion.div>
